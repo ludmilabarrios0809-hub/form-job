@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Solicitud de Empleo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Solicitud de Empleo</h1>
+    <form>
+      <label for="name">Nombre Completo:</label>
+      <input type="text" id="name" required placeholder="Ej. Ana Gómez">
+
+      <label for="email">Correo Electrónico:</label>
+      <input type="email" id="email" required placeholder="ejemplo@correo.com">
+
+      <label for="position">Puesto de Trabajo:</label>
+      <select id="position" required>
+        <option value="">-- Selecciona una opción --</option>
+        <option value="frontend">Desarrollador Frontend</option>
+        <option value="backend">Desarrollador Backend</option>
+        <option value="designer">Diseñador UI/UX</option>
+      </select>
+
+      <fieldset class="radio-group">
+        <legend>Disponibilidad:</legend>
+        
+        <label for="full-time">
+          <input type="radio" id="full-time" name="availability" value="full-time" required>
+          Tiempo Completo
+        </label>
+        
+        <label for="part-time">
+          <input type="radio" id="part-time" name="availability" value="part-time" required>
+          Medio Tiempo
+        </label>
+      </fieldset>
+
+      <label for="message">Mensaje o Comentarios:</label>
+      <textarea id="message" id="message" rows="4" placeholder="Cuéntanos sobre ti..."></textarea>
+
+      <button type="submit">Enviar Solicitud</button>
+    </form>
+  </div>
+</body>
+</html>

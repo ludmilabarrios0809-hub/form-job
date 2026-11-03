@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 12px;
+  margin-bottom: 4px;
+  color: #444;
+  font-weight: bold;
+}
+
+/* Pruebas 20: Aplicar :first-of-type al primer input */
+input:first-of-type {
+  border-radius: 12px;
+}
+
+input, select, textarea {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Pruebas 11 y 12: Selectores en lista en el orden exacto requerido (input, select, textarea) */
+input:invalid, select:invalid, textarea:invalid {
+  border-color: red;
+}
+
+input:valid, select:valid, textarea:valid {
+  border-color: green;
+}
+
+/* Pruebas 13 y 14: :focus en input y textarea en el orden exacto para cambiar borde y quitar outline */
+input:focus, textarea:focus {
+  border-color: #0056b3;
+  outline: none;
+}
+
+/* Estilos de la sección radio-group */
+.radio-group {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin: 15px 0;
+}
+
+.radio-group label {
+  font-weight: normal;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* Pruebas 16, 17 y 18: :checked en radio buttons para borde, fondo y sombra */
+.radio-group input[type="radio"]:checked {
+  border-color: #28a745;
+  background-color: #e8f5e9;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+}
+
+/* Prueba 19: :checked para cambiar el color del texto de la label asociada */
+.radio-group input[type="radio"]:checked + label,
+.radio-group label:has(input[type="radio"]:checked) {
+  color: #28a745;
+}
+
+/* Prueba 15: Botón con pseudoclase :hover */
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover{
+  background-color: #0056b3;
+}
